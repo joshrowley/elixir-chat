@@ -1,4 +1,5 @@
-import Backbone from "backbone"
+import Backbone from 'backbone'
+import Batch from './models/batch'
 
 const Router = Backbone.Router.extend({
   routes: {
@@ -11,7 +12,7 @@ const Router = Backbone.Router.extend({
   },
 
   showBatch (batchID) {
-    console.log('on batch show page')
+    new Batch({id: batchID})
   }
 })
 

@@ -18,7 +18,6 @@ import "phoenix_html"
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-import socket from "./socket"
 import $ from 'jquery'
 import Backbone from 'backbone'
 import Marionette from 'backbone.marionette'
