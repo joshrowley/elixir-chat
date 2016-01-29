@@ -21,10 +21,17 @@ import "phoenix_html"
 import socket from "./socket"
 import $ from 'jquery'
 import Backbone from 'backbone'
+import Marionette from 'backbone.marionette'
 import Router from "./router"
+
+const App = Marionette.Application.extend({
+  onStart () {
+    new Router
+    Backbone.history.start({pushState: true})
+  }
+})
 
 
 $(() => {
-  new Router
-  Backbone.history.start({pushState: true})
+  (new App).start()
 })
