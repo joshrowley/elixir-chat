@@ -12,7 +12,7 @@ const Router = Backbone.Router.extend({
   },
 
   showBatch (batchID) {
-    new Batch({id: batchID})
+    window.batch = new Batch({id: batchID})
   }
 })
 
