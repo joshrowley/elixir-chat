@@ -4,9 +4,10 @@ import Backbone from 'backbone'
 const Batch = Backbone.Model.extend({
   initialize () {
     socket
-      .channel('batches:' + this.id, {})
+      .channel('batches:lobby', {})
       .join()
       .receive('error', () => console.log('Connection error'))
+      .receive('ok', () => console.log('Connected'))
   }
 })
 

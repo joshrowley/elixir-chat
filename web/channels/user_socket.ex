@@ -2,7 +2,7 @@ defmodule ElixirChat.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", ElixirChat.RoomChannel
+  channel "batches:*", ElixirChat.BatchChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
