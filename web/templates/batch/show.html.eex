@@ -1,0 +1,13 @@
+<h2>Show batch</h2>
+
+<ul>
+
+  <li>
+    <strong>Iteration:</strong>
+    <%= @batch.iteration %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: batch_path(@conn, :edit, @batch) %>
+<%= link "Back", to: batch_path(@conn, :index) %>
